@@ -5,7 +5,7 @@ This project implements a UDP-based client application designed for a multiplaye
 ## Features
 
 - **Game Registration**:
-	-***The client sends a REGISTER request to the game server to join a match.***
+	-***The client sends a REGISTER request to the game server to join a match.***\n
 	-***Upon successful registration, the server responds with necessary game information, including player ID and game session details.***
   
 - **Game State Management**:  
