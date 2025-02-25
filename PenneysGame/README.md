@@ -5,22 +5,22 @@ This project implements a UDP-based client application designed for a multiplaye
 ## Features
 
 - **Game Registration**:
-	-***The client sends a REGISTER request to the game server to join a match.***  
-	-***Upon successful registration, the server responds with necessary game information, including player ID and game session details.***  
+	- The client sends a REGISTER request to the game server to join a match.  
+	- Upon successful registration, the server responds with necessary game information, including player ID and game session details.  
   
 - **Game State Management**:  
-	-***The client continuously listens for game updates from the server.***  
-	-***Handles game events such as player actions, state changes, and game progress updates.***  
+	- The client continuously listens for game updates from the server.  
+	- Handles game events such as player actions, state changes, and game progress updates.  
   
 - **Message Exchange**:  
-	-***Supports structured UDP message communication with predefined message types (GAME, WINNER, END).***  
-	-***Processes incoming packets efficiently to ensure real-time game performance.***  
+	- Supports structured UDP message communication with predefined message types (GAME, WINNER, END).  
+	- Processes incoming packets efficiently to ensure real-time game performance.  
   
 - **Buffering and Performance Optimization**:  
-	-***Uses dedicated buffers for sending and receiving game-related messages.***  
-	-***Implements an efficient queue system for managing incoming and outgoing messages.***  
+	- Uses dedicated buffers for sending and receiving game-related messages.  
+	- Implements an efficient queue system for managing incoming and outgoing messages.    
   
 - **Error Handling and Resilience**:  
-	-***Detects and handles packet loss or corruption using retransmission mechanisms.***  
-	-***Ensures smooth operation by filtering invalid or out-of-sequence messages.***  
+	- Detects and handles packet loss or corruption using retransmission mechanisms.    
+	- Ensures smooth operation by filtering invalid or out-of-sequence messages.    
   
