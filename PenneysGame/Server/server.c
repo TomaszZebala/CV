@@ -1,4 +1,4 @@
-//============= Kod Serwera obslugujacego gry (POSIX) =============
+//============= Server (POSIX) =============
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <sys/socket.h>
