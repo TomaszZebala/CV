@@ -1,22 +1,26 @@
-# UDP Client Application
+# Penney's Ante Game
 
 ## Description
-This project implements a simple UDP client application in C that communicates with multiple UDP servers. The client listens for incoming messages, sends random messages to connected servers, and ensures that the servers remain active through periodic "keep-alive" messages. The client is capable of handling dynamic server connections and maintains an updated list of active servers.
-
+This project implements a UDP-based client application designed for a multiplayer game. The client communicates with a central game server and other clients over a UDP network, handling game state updates, player interactions, and synchronization mechanisms.
 ## Features
 
-- **Listening for Incoming Messages**:  
-  The client continuously listens for UDP packets from servers. When a server sends a "HELLO" message, the client stores the server's information (IP address, port, and token) for future communication.
-
-- **Random Message Generation**:  
-  The application randomly generates a message and sends it to a connected UDP server. The server processes the message and responds with a confirmation or error message. The client measures the response time, logs the duration in microseconds, and records the timestamp of the request.
-
-- **Keep-alive Mechanism**:  
-  Periodically, the client sends "KEEP_ALIVE" messages to all connected servers to ensure that the servers remain active. If a server does not respond within a set time frame, it is removed from the list of connected servers.
-
-- **Server Monitoring**:  
-  The client actively monitors all connected servers by checking their status. Inactive servers that do not respond are removed from the list.
-
-- **Buffer Management**:  
-  When only one server is connected, the client clears the message buffer every 5 seconds to maintain system performance and avoid potential memory overuse.
-
+- **Game Registration**:
+	-***The client sends a REGISTER request to the game server to join a match.***
+	-***Upon successful registration, the server responds with necessary game information, including player ID and game session details.***
+  
+- **Game State Management**:  
+	-***The client continuously listens for game updates from the server.***
+	-***Handles game events such as player actions, state changes, and game progress updates.***
+  
+- **Message Exchange**:  
+	-***Supports structured UDP message communication with predefined message types (GAME, WINNER, END).***
+	-***Processes incoming packets efficiently to ensure real-time game performance.***
+  
+- **Buffering and Performance Optimization**:  
+	-***Uses dedicated buffers for sending and receiving game-related messages.***
+	-***Implements an efficient queue system for managing incoming and outgoing messages.***
+  
+- **Error Handling and Resilience**:  
+	-***Detects and handles packet loss or corruption using retransmission mechanisms.***
+	-***Ensures smooth operation by filtering invalid or out-of-sequence messages.***
+  
